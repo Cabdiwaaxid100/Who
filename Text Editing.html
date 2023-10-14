@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #title {
+      color: blue;
+      margin-top: 5%;
+      font-weight: normal;
+      margin-left: 0.2%;
+      justify-content: center;
+      align-items: center;
+      background-color: #b4baba;
+      width: 98.5%;
+    }
+    #text-editing {
+      width: 100%;
+    }
+    .radio-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .radio-container input[type="radio"] {
+      margin-right: 5px;
+    }
+    #text-input {
+      width: 300px;
+      border: none;
+      outline: none;
+      font-size: 20px;
+      margin-left: 1%;
+    }
+    #text-btn{
+      margin-left: 85%;
+      margin-top: 0%;
+      background-color: #0efb3a;
+      padding: 10px;
+    }
+    #filters {
+      display: flex;
+      font-weight: ;
+    }
+    #black{
+      padding: 10px;
+      background-color: black;
+      color: white;
+      font-size: 15px;
+      margin-left: 7px;
+      width: 15%;
+    }
+    #white{
+      padding: 10px;
+      background-color: white;
+      color: black;
+      font-size: 15px;
+      margin-left: 7px;
+      width: 15%;
+    }
+    #green{
+      padding: 10px;
+      background-color: green;
+      color: white;
+      font-size: 15px;
+      margin-left: 7px;
+      width: 15%;
+    }
+    #yellow{
+      padding: 10px;
+      background-color: yellow;
+      color: black;
+      font-size: 15px;
+      margin-left: 7px;
+      width: 15%;
+    }
+    #skyblue{
+      padding: 10px;
+      margin-left: 7px;
+      background-color: skyblue;
+      color: white;
+      font-size: 15px;
+      width: 15%;
+    }
+    #orange{
+      padding: 10px;
+      background-color: orange;
+      color: white;
+      margin-left: 7px;
+      font-size: 15px;
+      width: 15%;
+    }
+    #baby{
+      padding: 7px;
+      background-color: black;
+      color: white;
+      width: 20%;
+    }
+    #align{
+      text-align: center;
+    }
+    #italic{
+      background-color: black;
+      color: white;
+      padding: 7px;
+      margin-top: 15px;
+      margin-left: 25px;
+      width: 22%;
+      font-style: italic;
+    }
+    #varti{
+      background-color: black;
+      color: white;
+      padding: 7px;
+      margin-top: 15px;
+      margin-left: 5px;
+      width: 22%;
+      font-variant: small-caps;
+    }
+    #normal{
+      background-color: black;
+      color: white;
+      padding: 7px;
+      margin-top: 15px;
+      width: 22%;
+      font-style: normal;
+    }
+    #nor{
+      background-color: black;
+      color: white;
+      padding: 7px;
+      margin-top: 15px;
+      width: 22%;
+      font-variant: normal;
+    }
+    #background{
+      background-color: purple;
+      padding: 7px;
+      width: 15%;
+      color: white;
+      margin-top: 6%;
+    }
+    #backgr{
+      background-color: #45e102;
+      padding: 7px;
+      width: 15%;
+      color: white;
+      margin-top: 6%;
+    }
+    #bab{
+      background-color: gold;
+      padding: 7px;
+      width: 15%;
+      color: white;
+      margin-top: 6%;
+    }
+    #box{
+      background-color: blue;
+      padding: 7px;
+      width: 15%;
+      color: white;
+      margin-top: 6%;
+    }
+    #blue{
+      background-color: red;
+      padding: 7px;
+      width: 15%;
+      color: white;
+      margin-top: 6%;
+    }
+    #hide{
+      background-color: black;
+      padding: 7px;
+      width: 15%;
+      color: white;
+      margin-top: 6%;
+    }
+    #middle{
+      margin-top: 6%;
+      background-color: transparent;
+      border: none;
+      padding: 7px;
+      font-size: 35px;
+    }
+    #design-form input{
+      width: 100%;
+    }
+    #raw{
+      width: 100%;
+    }
+    #dhigid{
+      width: 9%;
+      height: 4vh;
+      font-size: 26px;
+      background-color: white;
+      margin-top: 5px;
+      border: 0.001px solid #fffbfbef;
+    }
+    #tag{
+      margin-left: 33%;
+    }
+    #deleted{
+      background-color: white;
+      color: black;
+      font-size: 23px;
+      border: 0.001px solid #fffbfbef;
+      padding: 5px;
+    }
+    #dhigid:active{
+      border: 1px solid red;
+      background-color: #ffeaea;
+    }
+    #deleted:active{
+      border: 1px solid red;
+      background-color: #ffeaea;
+    }
+    #space:active{
+      border: 1px solid red;
+      background-color: #ffeaea;
+    }
+    #space{
+      width: 99%;
+      height: 4vh;
+      border-radius: 1px 1px 90px 90px;
+      
+      font-size: 25px;
+      background-color: white;
+      border: 0.001px solid #fffbfbef;
+    }
+    header{
+      box-shadow: 0 0 1px gray;
+      position: fixed;
+      left: 0%;
+      top: 0%;
+      width: 100%;
+      z-index: 2;
+      height: 27%;
+      background-color: white;
+    }
+    main {
+      margin-top: 50%;
+      margin-left: -1%;
+      margin-right: -1%;
+      overflow: scroll;
+      height: 100vh;
+      box-shadow: 0 0 1px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="container">
+    <div id="text-editing">
+      <textarea id="text-input" placeholder="Enter your text" readonly=""></textarea>
+      <button id="text-btn">Upload Text</button>
+    </div>
+    <h1 id="title">Whoapp Somali</h1>
+    </header>
+    <main>
+      <div id="align">
+      <button id="baby" onclick="good ()">left</button>
+      <button id="baby" onclick="center ()">center</button>
+      <button id="baby" onclick="right ()">right</button>
+      <button id="baby" onclick="flex()">display flex</button>
+    </div>
+    <div id="text-style">
+      <button id="italic" onclick="italic();">italic</button>
+      <button id="varti" onclick="varti();">Variantle</button>
+      <button id="normal" onclick="normal ();">Normal</button>
+      <button id="nor" onclick="nor ();">Variantle Normal</button>
+    </div>
+    <br>
+    <div id="colors">
+      <button id="green" onclick="green();">Green</button>
+      <button id="yellow" onclick="yellow ();">yellow</button>
+      <button id="black" onclick="black ();">Black</button>
+      <button id="orange" onclick="orange ();">orange</button>
+      <button id="skyblue" onclick="skyblue ();">skyblue</button>
+      <button id="white" onclick="white ();">white</button>
+    </div>
+    <br>
+    <div id="filters">
+      <div class="radio-container">
+        <input type="radio" name="filter" id="filter-none" checked>
+        <label for="filter-none">None</label>
+      </div>
+      <div class="radio-container">
+        <input type="radio" name="filter" id="filter-uppercase">
+        <label for="filter-uppercase">Uppercase</label>
+      </div>
+      <div class="radio-container">
+        <input type="radio" name="filter" id="filter-lowercase">
+        <label for="filter-lowercase">Lowercase</label>
+      </div><br>
+  <input type="radio" name="bold" id="bold" onchange="none()">
+  <label for="bold">none</label>
+  <input type="radio" name="bold" id="bold" onchange="bold();">
+  <label for="bold">Bold</label>
+  <input type="radio" name="size" onchange="size1 ();">
+  <label for="size">50px</label>
+  <input type="radio" name="size" onchange="size2 ();">
+  <label for="size">70px</label>
+  <input type="radio" name="size" onchange="size3 ();">
+  <label for="size">100px</label>
+  </div>
+  <br>
+  <div id="shadow">
+  <input type="radio" onchange="shadow ();" name="shadow">
+  <label for="shadow">Red and cyan</label>
+  <input type="radio" onchange="shadow2 ();" name="shadow">
+  <label for="shadow">cyan and red</label>
+  <input type="radio" onchange="shadow3 ();" name="shadow">
+  <label for="shadow">black and red</label>
+  <input type="radio" onchange="shadow4 ();" name="shadow">
+  <label for="shadow">red and black</label>
+  <input type="radio" onchange="shadow5 ();" name="shadow">
+  <label for="shadow">Red</label>
+  <input type="radio" onchange="shadow6 ();" name="shadow">
+  <label for="shadow">cyan</label>
+  <input type="radio" onchange="shadow7 ();" name="shadow">
+  <label for="shadow">Black</label>
+    </div>
+    <div id="background-color">
+      <button id="background" onclick="background()">Purple</button>
+      <button id="backgr" onclick="backgr()">#45e102</button>
+      <button id="bab" onclick="back()">Gold</button>
+      <button id="middle">|</button>
+      <button id="blue" onclick="blue ()">red</button>
+      <button id="box" onclick="box()">blue</button>
+      <button id="hide" onclick="hide ()">black</button>
+    </div><br>
+    <div id="height">
+      <form id="design-form">
+        <label for="brightness">Brightness:</label>
+        <input type="range" id="brightness" min="0" max="200" value="100">
+        
+        <label for="contrast">Contrast:</label>
+        <input type="range" id="contrast" min="0" max="200" value="100">
+        
+        <label for="saturation">Saturation:</label>
+        <input type="range" id="saturation" min="0" max="200" value="100">
+    </form><br>
+    <div id="raw">
+      <button id="dhigid" onclick="appendValue('1')">1</button>
+      <button id="dhigid" onclick="appendValue('2')">2</button>
+      <button id="dhigid" onclick="appendValue('3')">3</button>
+      <button id="dhigid" onclick="appendValue('4')">4</button>
+      <button id="dhigid" onclick="appendValue('5')">5</button>
+      <button id="dhigid" onclick="appendValue('6')">6</button>
+      <button id="dhigid" onclick="appendValue('7')">7</button>
+      <button id="dhigid" onclick="appendValue('8')">8</button>
+      <button id="dhigid" onclick="appendValue('9')">9</button>
+      <button id="dhigid" onclick="appendValue('0')">0</button>
+    </div>
+    <div id="raw">
+      <button id="dhigid" onclick="appendValue('q')">q</button>
+      <button id="dhigid" onclick="appendValue('w')">w</button>
+      <button id="dhigid" onclick="appendValue('e')">e</button>
+      <button id="dhigid" onclick="appendValue('r')">r</button>
+      <button id="dhigid" onclick="appendValue('t')">t</button>
+      <button id="dhigid" onclick="appendValue('y')">y</button>
+      <button id="dhigid" onclick="appendValue('u')">u</button>
+      <button id="dhigid" onclick="appendValue('i')">i</button>
+      <button id="dhigid" onclick="appendValue('o')">o</button>
+      <button id="dhigid" onclick="appendValue('p')">p</button>
+    </div>
+    <div id="raw">
+      <button id="dhigid" onclick="appendValue('a')">a</button>
+      <button id="dhigid" onclick="appendValue('s')">s</button>
+      <button id="dhigid" onclick="appendValue('d')">d</button>
+      <button id="dhigid" onclick="appendValue('f')">f</button>
+      <button id="dhigid" onclick="appendValue('g')">g</button>
+      <button id="dhigid" onclick="appendValue('h')">h</button>
+      <button id="dhigid" onclick="appendValue('j')">j</button>
+      <button id="dhigid" onclick="appendValue('k')">k</button>
+      <button id="dhigid" onclick="appendValue('l')">l</button>
+      <button id="dhigid" onclick="appendValue('`')">'</button>
+    </div>
+    <div id="raw">
+      <button onclick="clearResult()" id="deleted">All-Clear</button>
+      <button id="dhigid" onclick="appendValue('z')">z</button>
+      <button id="dhigid" onclick="appendValue('x')">x</button>
+      <button id="dhigid" onclick="appendValue('c')">c</button>
+      <button id="dhigid" onclick="appendValue('v')">v</button>
+      <button id="dhigid" onclick="appendValue('b')">b</button>
+      <button id="dhigid" onclick="appendValue('n')">n</button>
+      <button id="dhigid" onclick="appendValue('m')">m</button>
+      <button onclick="deleteLastChar()" id="deleted">Delete-Last</button>
+      </div>
+      <div id="wax">
+      <div id="tag">
+      <button id="dhigid" onclick="appendValue('!')">!</button>
+      <button id="dhigid" onclick="appendValue('?')">?</button>
+      <button id="dhigid" onclick="appendValue(',')">,</button>
+      <button id="dhigid" onclick="appendValue('.')">.</button>
+    </div>
+    </div>
+    <button id="space" onclick="appendValue(' ')">Space</button>
+    </div>
+  </div>
+  </main>
+  <script>
+    function clearResult() {
+    document.getElementById('text-input').value = '';
+}
+function appendValue(value) {
+        var input = document.getElementById('text-input');
+        var result = input.value;
+
+        // Capitalize the first word
+        if (result.length === 0 || result.endsWith('. ')) {
+          value = value.toUpperCase();
+        }
+
+        input.value += value;
+      }
+function deleteLastChar() {
+    var result = document.getElementById('text-input').value;
+    document.getElementById('text-input').value = result.substring(0, result.length - 1);
+}
+  </script>
+  <script>
+      document.getElementById('design-form').addEventListener('input', function() {
+            var brightness = document.getElementById('brightness').value;
+            var contrast = document.getElementById('contrast').value;
+            var saturation = document.getElementById('saturation').value;
+            document.getElementById('title').style.filter = `brightness(${brightness}%) contrast(${contrast}%) saturate(${saturation}%)`;
+        });
+    </script>
+  <script>
+    document.getElementById('text-btn').addEventListener('click', function() {
+      var textInput = document.getElementById('text-input').value;
+      document.getElementById('title').textContent = textInput;
+    });
+    document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
+      radio.addEventListener('change', function() {
+        var selectedFilter = document.querySelector('input[name="filter"]:checked').id;
+        var titleText = document.getElementById('title').textContent;
+        if (selectedFilter === 'filter-uppercase') {
+          document.getElementById('title').textContent = titleText.toUpperCase();
+        } else if (selectedFilter === 'filter-lowercase') {
+          document.getElementById('title').textContent = titleText.toLowerCase();
+        } else {
+          document.getElementById('title').textContent = titleText;
+        }
+      });
+    });
+    </script>
+    <script>
+      function bold () {
+        const both = document.getElementById('title');
+        both.style.fontWeight ='bold';
+      }
+      function none () {
+        const none = document.getElementById('title');
+        none.style.fontWeight ='normal';
+      }
+      function size1() {
+        const size1 = document.getElementById('title');
+        size1.style.fontSize = '50px';
+      }
+      function size2() {
+        const size2 = document.getElementById('title');
+        size2.style.fontSize = '70px';
+      }
+      function size3() {
+        const size3 = document.getElementById('title');
+        size3.style.fontSize = '100px';
+      }
+      function box () {
+        const shadow = document.getElementById('title');
+        shadow.style.boxShadow = '0 0 10px blue';
+      }
+      function blue () {
+        const shadow = document.getElementById('title');
+        shadow.style.boxShadow = '0 0 10px red';
+      }
+      function hide () {
+        const shadow = document.getElementById('title');
+        shadow.style.boxShadow = '0 0 10px black';
+      }
+      function shadow() {
+        const shadow = document.getElementById('title');
+        shadow.style.textShadow = 'red -3px 0, cyan 4px 0';
+      }
+      function shadow2() {
+        const shadow2 = document.getElementById('title');
+        shadow2.style.textShadow = 'cyan -3px 0, red 4px 0';
+      }
+      function shadow3() {
+        const shadow2 = document.getElementById('title');
+        shadow2.style.textShadow = 'black -3px 0, red 4px 0';
+      }
+      function shadow4() {
+        const shadow2 = document.getElementById('title');
+        shadow2.style.textShadow = 'red -3px 0, black 4px 0';
+      }
+      function shadow5() {
+        const shadow2 = document.getElementById('title');
+        shadow2.style.textShadow = 'red -3px 0, red 4px 0';
+      }
+      function shadow6() {
+        const shadow2 = document.getElementById('title');
+        shadow2.style.textShadow = 'cyan -3px 0, cyan 4px 0';
+      }
+      function shadow7() {
+        const shadow2 = document.getElementById('title');
+        shadow2.style.textShadow = 'Black -3px 0, black 4px 0';
+      }
+      function green() {
+        const green = document.getElementById('title');
+        green.style.color = 'green';
+      }
+      function black() {
+        const green = document.getElementById('title');
+        green.style.color = 'black';
+      }
+      function yellow() {
+        const green = document.getElementById('title');
+        green.style.color = 'yellow';
+      }
+      function orange() {
+        const green = document.getElementById('title');
+        green.style.color = 'orange';
+      }
+      function white() {
+        const green = document.getElementById('title');
+        green.style.color = 'white';
+      }
+      function skyblue() {
+        const green = document.getElementById('title');
+        green.style.color = 'skyblue';
+      }
+      function good () {
+        const color = document.getElementById('title')
+        color.style.textAlign = 'left'
+      }
+      function center () {
+        const color = document.getElementById('title')
+        color.style.textAlign = 'center'
+      }
+      function right () {
+        const color = document.getElementById('title')
+        color.style.textAlign = 'right'
+      }
+      function flex () {
+        const flex = document.getElementById('title');
+        flex.style.display = 'flex';
+      }
+      function italic () {
+        const italic = document.getElementById('title');
+        italic.style.fontStyle = 'italic'
+      }
+      function varti () {
+        const italic = document.getElementById('title');
+        italic.style.fontVariant = 'small-caps'
+      }
+      function normal () {
+        const normal = document.getElementById('title');
+        normal.style.fontStyle = 'normal'
+      }
+      function nor () {
+        const normal = document.getElementById('title');
+        normal.style.fontVariant = 'normal'
+      }
+      function background () {
+        const background = document.getElementById('title');
+        background.style.background = 'purple'
+      }
+      function backgr () {
+        const background = document.getElementById('title');
+        background.style.backgroundColor = '#45e102'
+      }
+      function back () {
+        const background = document.getElementById('title');
+        background.style.backgroundColor = 'gold'
+      }
+    </script>
+</body>
+</html>
